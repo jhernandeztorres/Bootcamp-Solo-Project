@@ -1,0 +1,13 @@
+/* body {
+    background-color: ;
+} */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 290px;
+}
+
+input {
+    text-align: center;
+}
