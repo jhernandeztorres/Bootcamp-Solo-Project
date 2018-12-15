@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- Local Styling -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/starfield.css">
-    <!-- Phaser CDN -->
-    <script src="https://labs.phaser.io/build/phaser-arcade-physics.min.js"></script> 
+    <!-- <link rel="stylesheet" href="assets/css/starfield.css"> -->
+    <!-- Phaser JS -->
+    <script src="./assets/js/phaser.js"></script>
     <title>Login Page</title>
 </head>
 
@@ -33,6 +35,48 @@
             </div>
         </div>
     </nav> <!-- NavBar Ends -->
+    <!-- Username Input -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="input-group col-md-6 justify-content-center">
+                <input id="name" type="text" class="form-control" placeholder="Input Name Here" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <!-- Ship Selection -->
+        <!-- <div class="row mt-3 text-center">
+            <div class="col-md-2">
+                <img src="./assets/images/ALeinShip_537x640.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship1">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/images/UFO_640x320.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship2">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/images/blankrocket_366x640.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship3">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/images/gradientrocket_640x580.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship4">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/images/grayrocket_434x640.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship5">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/images/redrocket_323x640.png" class="img-fluid" alt="" srcset="">
+                <input type="radio" name="ships" id="ship6">
+            </div>
+        </div> -->
+        <!-- Log In Button -->
+        <div class="row justify-content-center">
+            <div class="text-center btn-block mt-3">
+                <button id="login" type="submit" class="btn btn-primary btn-lg bg-success">Log In!</button>
+            </div>
+        </div>
+    </div>
     <!-- Starfrield -->
     <div id="space">
         <div class="stars"></div>
@@ -41,58 +85,16 @@
         <div class="stars"></div>
         <div class="stars"></div>
     </div>
-    <!-- Username Input -->
-    <div class="container">
-        <div class="row">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="How would you like to be called?" aria-label="Username"
-                    aria-describedby="basic-addon1">
-            </div>
-        </div>
-        <!-- Ship Selection -->
-        <div class="row mt-3 text-center">
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship1">
-            </div>
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship2">
-            </div>
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship3">
-            </div>
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship4">
-            </div>
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship5">
-            </div>
-            <div class="col-md-2">
-                <img src="https://via.placeholder.com/150x150" class="img-fluid" alt="" srcset="">
-                <input type="radio" name="ships" id="ship6">
-            </div>
-        </div>
-        <!-- Log In Button -->
-        <div class="row">
-            <div class="text-center btn-block mt-3">
-                <button type="submit" class="btn btn-primary btn-lg bg-success btn-block">Log In!</button>
-            </div>
-        </div>
-    </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <!-- PhaserJS -->
-        <script src="./assets/js/phaser.js"></script>
-
-</body>
-
-</html>
+        <!-- Game JS -->
+        <script src="./assets/js/game.js"></script>
+        
+    </body>
+    
+    </html>
