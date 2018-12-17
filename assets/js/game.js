@@ -1,4 +1,3 @@
-canvas.hide();
 let playerArr = [];
 // function to hide login screen and show game. Needs to be in its own js file
 
@@ -25,7 +24,11 @@ let config = {
     type: Phaser.AUTO,
     width: 5760,
     height: 3240,
-    scene: gameScene
+    scene: {
+        gameScene,
+        preload: preload,
+        create: create
+    }
 }
 
 gameScene.preload = function(){
@@ -41,7 +44,7 @@ gameScene.preload = function(){
  gameScene.create = function(){
 
     this.ship1 = this.add.sprite(100, 100, 'ship1');
-    this.ship1.setScale(0.055);
+    this.ship1.setScale(0.05);
 
 }
 
